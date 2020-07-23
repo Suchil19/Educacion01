@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>FireBase Auth</title>
+        
+        <link rel="manifest" href="./manifest.json">
+        <!--BOOTSTRAP-->
+        
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!--Estilos Internos-->
+        <link rel="stylesheet" type="text/css" href="educacion-4.0/css/vendor.css">
+		<link href="./css/style.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		
+	</head>
+<body>
+	
+	<!-- Start Header Area -->
+    <header class="header-area">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./img/PreWolf.png" alt="Logo Seniman Koding | Doni Asrul Afandi">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-8 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li class="active"><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="index.html">Home version 01</a></li>
+                                                    <li><a href="index.html">Home version 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="static"><a href="#">pages <i class="fa fa-angle-down"></i></a>
+                                                <ul class="megamenu dropdown">
+                                                    <li class="mega-title"><a href="#">column 01</a>
+                                                        <ul>
+                                                            <li><a href="#">shop grid left
+                                                                    sidebar</a></li>
+                                                            <li><a href="#">shop grid right
+                                                                    sidebar</a></li>
+                                                            <li><a href="#">shop list left sidebar</a></li>
+                                                            <li><a href="#">shop list right sidebar</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-title"><a href="#">column 02</a>
+                                                        <ul>
+                                                            <li><a href="#">product details</a></li>
+                                                            <li><a href="#">product details affiliate</a></li>
+                                                            <li><a href="#">product details variable</a></li>
+                                                            <li><a href="#">product details group</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-title"><a href="#">column 03</a>
+                                                        <ul>
+                                                            <li><a href="#">cart</a></li>
+                                                            <li><a href="#">checkout</a></li>
+                                                            <li><a href="#">compare</a></li>
+                                                            <li><a href="#">wishlist</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-title"><a href="#">column 04</a>
+                                                        <ul>
+                                                            <li><a href="#">my-account</a></li>
+                                                            <li><a href="#">login-register</a></li>
+                                                            <li><a href="#">contact us</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">shop <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">shop grid layout <i class="fa fa-angle-right"></i></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">shop grid left sidebar</a></li>
+                                                            <li><a href="#">shop grid right sidebar</a></li>
+                                                            <li><a href="#">shop grid full 3 col</a></li>
+                                                            <li><a href="#">shop grid full 4 col</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">shop list layout <i class="fa fa-angle-right"></i></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">shop list left sidebar</a></li>
+                                                            <li><a href="#">shop list right sidebar</a></li>
+                                                            <li><a href="#">shop list full width</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">products details <i class="fa fa-angle-right"></i></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">product details</a></li>
+                                                            <li><a href="#">product details affiliate</a></li>
+                                                            <li><a href="#">product details variable</a></li>
+                                                            <li><a href="#">product details group</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Blog <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">blog left sidebar</a></li>
+                                                    <li><a href="#">blog right sidebar</a></li>
+                                                    <li><a href="#">blog grid no sidebar</a></li>
+                                                    <li><a href="#">blog details</a></li>
+                                                    <li><a href="#">blog details audio</a></li>
+                                                    <li><a href="#">blog details video</a></li>
+                                                    <li><a href="#">blog details left sidebar</a></li>
+                                                </ul>
+                                            </li>
+                                    <!--
+                                            <li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signinModal">Ingresa</a></li>
+                                            <li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signupModal">Registrate</a></li>
+                                            <li style="display: none;" class="logged-in"><a href="#">Nuevos Avisos</a></li>
+                                            <li style="display: none;" class="logged-in"><a href="#" id="logout" onclick="noticias()">Salir</a></li>
+                                    -->
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+                        <div class="col-lg-2"></div>
+                        <!-- mini cart area end -->
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src="./img/PreWolf.png" alt="Logo Seniman Koding | Doni Asrul Afandi">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <div class="mobile-menu-btn">
+                                    <div class="off-canvas-btn">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+    </header>
+    <!-- end Header Area -->
+
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="btn-close-off-canvas">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="off-canvas-inner">
+                <!-- search box start 
+                <div class="search-box-offcanvas">
+                    <form>
+                        <input type="text" placeholder="Search Here...">
+                        <button class="search-btn"><i class="ion-ios-search-strong"></i></button>
+                    </form>
+                </div>
+                <search box end -->
+
+                <!-- mobile menu start -->
+                <div class="mobile-navigation">
+                    <!-- mobile menu navigation start -->
+                    <nav>
+                        <ul class="mobile-menu">
+                            <li class="menu-item-has-children"><i class="fas fa-home"></i>&nbsp;<a href="index.html">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="index.html">Home version 01</a></li>
+                                    <li><a href="index.html">Home version 02</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">pages</a>
+                                <ul class="megamenu dropdown">
+                                    <li class="mega-title menu-item-has-children"><a href="#">column 01</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">shop grid left
+                                                    sidebar</a></li>
+                                            <li><a href="#">shop grid right
+                                                    sidebar</a></li>
+                                            <li><a href="#">shop list left sidebar</a></li>
+                                            <li><a href="#">shop list right sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-title menu-item-has-children"><a href="#">column 02</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">product details</a></li>
+                                            <li><a href="#">product
+                                                    details
+                                                    affiliate</a></li>
+                                            <li><a href="#">product details
+                                                    variable</a></li>
+                                            <li><a href="#">product details
+                                                    group</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-title menu-item-has-children"><a href="#">column 03</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">cart</a></li>
+                                            <li><a href="#">checkout</a></li>
+                                            <li><a href="#">compare</a></li>
+                                            <li><a href="#">wishlist</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-title menu-item-has-children"><a href="#">column 04</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">my-account</a></li>
+                                            <li><a href="#">login-register</a></li>
+                                            <li><a href="#">contact us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children "><a href="#">shop</a>
+                                <ul class="dropdown">
+                                    <li class="menu-item-has-children"><a href="#">shop grid layout</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">shop grid left sidebar</a></li>
+                                            <li><a href="#">shop grid right sidebar</a></li>
+                                            <li><a href="#">shop grid full 3 col</a></li>
+                                            <li><a href="#">shop grid full 4 col</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">shop list layout</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">shop list left sidebar</a></li>
+                                            <li><a href="#">shop list right sidebar</a></li>
+                                            <li><a href="#">shop list full width</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">products details</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">product details</a></li>
+                                            <li><a href="#">product details affiliate</a></li>
+                                            <li><a href="#">product details variable</a></li>
+                                            <li><a href="#">product details group</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children "><a href="#">Blog</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">blog left sidebar</a></li>
+                                    <li><a href="#">blog right sidebar</a></li>
+                                    <li><a href="#">blog grid no sidebar</a></li>
+                                    <li><a href="#">blog details</a></li>
+                                    <li><a href="#">blog details audio</a></li>
+                                    <li><a href="#">blog details video</a></li>
+                                    <li><a href="#">blog details left sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact us</a></li>
+
+                            <br>
+
+                            <li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signinModal"><i class="fas fa-user"></i>&nbsp;Ingresa</a></li>
+                            <!--li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signupModal">Registrate</a></li-->
+                            <li style="display: none;" class="logged-in"><a href="#"><i class="fas fa-bell"></i>&nbsp;Nuevos Avisos</a></li>
+                            <li style="display: none;" class="logged-in"><a href="#" id="logout" onclick="noticias()"><i class="fas fa-sign-out-alt"></i>&nbsp;Salir</a></li>
+                        </ul>
+                    </nav>
+                    <!-- mobile menu navigation end -->
+                </div>
+                <!-- mobile menu end -->
+
+
+                <!-- offcanvas widget area start -->
+                <div class="offcanvas-widget-area">
+                    <div class="off-canvas-contact-widget">
+                        <ul>
+                            <li><i class="fa fa-mobile"></i>
+                                <a href="#">0123456789</a>
+                            </li>
+                            <i class="far fa-envelope"></i>
+                                <a href="#">info@yourdomain.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="off-canvas-social-widget">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <!--
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        -->
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- offcanvas widget area end -->
+            </div>
+        </div>
+    </aside>
+    <!-- off-canvas menu end -->
+
+
+
+    <!-- main wrapper start -->
+    <section class="header">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-6">
+    				<div class="header-text">
+    					<div class="header-text-title">
+    						Prueba 1 firebase 
+    					</div>
+    					<div class="header-text-desc">
+    						Que vez perro XD
+    					</div>
+    					<div class="header-text-cta">
+    						<a href="">learn more</a>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-6">
+    				<div class="header-img">
+    					<img src="assets/img/video.jpg" alt="">
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <!-- main wrapper end -->
+
+	<div id="preloader"></div>
+
+ 
+
+<!--MAIN CONTENT-->
+<div class="container p-5" style="z-index:1">
+	<div class="row">
+	  <div class="col-md-6 offset-md-3">
+		<ul class="list-group posts">
+  
+		</ul>
+	  </div>
+	</div>
+  </div>
+  
+  
+  <!--BOOTSTRAP SCRIPTS-->
+  
+	<!-- Modal  SignUP-->
+	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h6 class="modal-title" id="exampleModalLabel">Registro:
+			  Contraseña con al menos 6 caracteres
+			</h6>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form id="signup-form">
+			  <div class="form-group">
+				  <input type="text" id="signup-email" class="form-control"
+				  placeholder="E-mail" required>
+			  </div>
+			  <div class="form-group">
+				  <input type="password" id="signup-password" class="form-control"
+				  placeholder="Contraseña" required>
+			  </div>
+			  <button type="submit" class="btn btn-primary">SignUp</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+  
+  
+	<!-- Modal  SignIn-->
+	<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h6 class="modal-title" id="exampleModalLabel">Ingresa a nuestra plataforma y mantente informado
+			</h6>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			  
+			<form id="login-form">
+				<!--
+			  <div class="form-group">
+				  <input type="text" id="login-email" class="form-control"
+				  placeholder="E-mail" required>
+			  </div>
+			  <div class="form-group">
+				  <input type="password" id="login-password" class="form-control"
+				  placeholder="Contraseña" required>
+			  </div>
+			  
+			  <button type="submit" class="btn btn-info btn-block">Ingresa</button>
+			  -->
+			  <button type="button" class="btn btn-secondary btn-block" id="googleLogin"><i class="fab fa-google" aria-hidden="true"></i>&nbsp;Regístrate con Gmail</button>
+			  <button type="submit" class="btn btn-primary btn-block" id="facebookLogin"><i class="fab fa-facebook"></i>&nbsp;Regístrate con Facebook</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+<br>
+<br>
+
+ <div>
+    Tebgo que cambiar el nav bar
+</div>
+
+<script src="./script.js"></script>
+<script>
+	$('.icon').click(function(){
+	  $('span').toggleClass("cancel");
+	});
+  </script>
+<!--BOOTSTRAPSCRIPTS-->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+
+
+<!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDAGwleo0r9jiJ0Aj4mt0xvaFxVCI0qY-A",
+    authDomain: "educacion40-7a220.firebaseapp.com",
+    databaseURL: "https://educacion40-7a220.firebaseio.com",
+    projectId: "educacion40-7a220",
+    storageBucket: "educacion40-7a220.appspot.com",
+    messagingSenderId: "261646068913",
+    appId: "1:261646068913:web:042167a365264813118690"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  // FireStore base de datos
+  const fs = firebase.firestore();
+</script>
+<!--TERMINA FIREBASE-->
+
+<!--CUSTOM CODE-->
+<script src="./registro.js"></script>
+<script src="./main/scripts.js"></script>
+<script src="./educacion-4.0/lib/jquery/jquery.min.js"></script>
+<script src="./educacion-4.0/lib/bootstrap/js/bootstrap.min.js"></script>
+
+	<!--Jquery js-->
+    <script src="./educacion-4.0/lib/jquery-3.0.0.min.js"></script>
+
+    <script src="./educacion-4.0/lib/bootstrap.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="./educacion-4.0/lib/smooth-scroll.js"></script>
+    <!--Main js-->
+    <script src="./educacion-4.0/lib/main.js"></script>
+
+<!--LOCAL SCRIPTS-->
+</body>
+</html>
+
+
+

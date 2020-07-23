@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talento</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Estilos Internos-->
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</head>
+<body>
+  <div id="preloader"></div>
+  <!-- Comienza Side NavBar-->
+  <div class="btn1">
+    <span class="fas fa-bars"></span>
+  </div>
+<nav class="sidebar">
+  <div class="logo-menu"></div>
+    <a href="../index.html"><div class="text"><i class="fa fa-home" aria-hidden="true"></i>Home</div></a>
+<ul>
+    <li>
+        <a href="#" class="serv-btn1"><i class="fa fa-user" aria-hidden="true"></i>Sesión
+          <span class="fas fa-caret-down second"></span>
+        </a>
+        <ul class="serv-show">
+<li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signinModal">Ingresa</a></li>
+<li style="display: none;" class="logged-out"><a href="#" data-toggle="modal" data-target="#signupModal">Registrate</a></li>
+<li style="display: none;" class="logged-in"><a href="#">Nuevos Avisos</a></li>
+<li style="display: none;" class="logged-in"><a href="#" id="logout" onclick="noticias()">Salir</a></li>
+</ul>
+</li>
+<li class="active"><a href="./biblioteca.html"><i class="fa fa-book" aria-hidden="true"></i>
+  Bliblioteca</a></li>
+<li>
+  <li class="active"><a href="./educacion-4.0.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+    Educación 4.0</a></li>
+  <li>
+        <a href="#" class="feat-btn1"><i class="fa fa-users" aria-hidden="true"></i>Expertos
+          <span class="fas fa-caret-down first"></span>
+        </a>
+        <ul class="feat-show">
+<li><a href="./expertos.html">Expertos</a></li>
+<li><a href="./casos-de-exito.html">Casos de éxito</a></li>
+</ul>
+</li>
+<li class="active"><a href="./herramientas.html"><i class="fa fa-podcast" aria-hidden="true"></i>Herramientas</a></li>
+<li class="active"><a href="./noticias.html"><i class="fa fa-rss" aria-hidden="true"></i>Noticias</a></li>
+<li class="active"><a href="./talento.html"><i class="fa fa-star" aria-hidden="true"></i>Talento</a></li>
+<li class="active"><a href="./videos.html"><i class="fa fa-play" aria-hidden="true"></i>Videos</a></li>
+<!-- 
+<li>
+        <a href="#" class="tercer-btn1">Features 2
+          <span class="fas fa-caret-down third"></span>
+        </a>
+        <ul class="tercer-show">
+<li><a href="#">Casos de Exito</a></li>
+<li><a href="#">Elements</a></li>
+</ul>
+</li>
+
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Overview</a></li>
+
+<li><a href="#">Shortcuts</a></li>
+<li><a href="#" class="last-buttom">Casos de Exito</a></li>
+</ul>
+
+-->
+</nav>
+
+<div>
+    Talento
+</div>
+
+<!--MAIN CONTENT-->
+<div class="container p-5" style="z-index:1">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <ul class="list-group posts">
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!--BOOTSTRAP SCRIPTS-->
+
+  <!-- Modal  SignUP-->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">Registro:
+            Contraseña con al menos 6 caracteres
+          </h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signup-form">
+            <div class="form-group">
+                <input type="text" id="signup-email" class="form-control"
+                placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="signup-password" class="form-control"
+                placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">SignUp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal  SignIn-->
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingresa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+                <input type="text" id="login-email" class="form-control"
+                placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="login-password" class="form-control"
+                placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-info btn-block">Ingresa</button>
+            <button type="button" class="btn btn-secondary btn-block" id="googleLogin">Registrate con Gmail</button>
+            <button type="submit" class="btn btn-primary btn-block" id="facebookLogin">Registrate con Facebook</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Hero-->
+<br>
+<br>
+
+<!--BOOTSTRAPSCRIPTS-->
+<script>
+    $('.btn1').click(function(){
+      $(this).toggleClass("click");
+      $('.sidebar').toggleClass("show");
+    });
+      $('.feat-btn1').click(function(){
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+      });
+      $('.serv-btn1').click(function(){
+        $('nav ul .serv-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+      });
+      // agregue una tercera clase para otro nivel
+      $('.tercer-btn1').click(function(){
+        $('nav ul .tercer-show').toggleClass("show2");
+        $('nav ul .third').toggleClass("rotate");
+      });
+      //
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+<!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDAGwleo0r9jiJ0Aj4mt0xvaFxVCI0qY-A",
+    authDomain: "educacion40-7a220.firebaseapp.com",
+    databaseURL: "https://educacion40-7a220.firebaseio.com",
+    projectId: "educacion40-7a220",
+    storageBucket: "educacion40-7a220.appspot.com",
+    messagingSenderId: "261646068913",
+    appId: "1:261646068913:web:042167a365264813118690"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  // FireStore base de datos
+  const fs = firebase.firestore();
+</script>
+<!--TERMINA FIREBASE-->
+
+<!--CUSTOM CODE-->
+<script src="./registro.js"></script>
+<script src="./main/scripts.js"></script>
+
+<!--LOCAL SCRIPTS-->
+</body>
+</html>
